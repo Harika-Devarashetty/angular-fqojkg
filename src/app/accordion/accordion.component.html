@@ -1,0 +1,15 @@
+<div class="accordion">
+<div *ngFor="let seco of sections">
+  <h2 class="title" (click)="opened = !opened">{{seco.name}}</h2>
+  <div class="content-container" [class.opened]="opened">
+    <p class="content">Content of the accordion</p>
+ 
+    <form>
+    <div *ngFor="let sec of sections">
+       <input type="checkbox"> {{sec.name}}
+    </div>
+ </form>
+  </div>
+</div>
+</div>
+
